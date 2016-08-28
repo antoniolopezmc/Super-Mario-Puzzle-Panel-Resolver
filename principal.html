@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Puzle Resolver</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="content">
+		<div id="initConfig" class="panel">
+			<p class="titles">Config</p>
+			<p>N x N: <input id="lado" class="inputNumber" type="number" name="lado" min="1" max="20" value="1"></p>
+			<p>Pasos: <input id="pasos" class="inputNumber" type="number" name="pasos" min="1" max="100" value="1"></p>
+			<p><button id="crearEscenario" class="boton" onclick="funcionConstruirTablero()">Crear escenario</button></p>
+		</div>
+		<div id="after" class="panel">
+			<p class="titles">Objetivo</p>
+			<table id="tableAfter">
+				
+			</table>
+			<br>
+		</div>
+		<div id="before" class="panel">
+			<p class="titles">Actual</p>
+			<table id="tableBefore">
+				
+			</table>
+			<br>
+		</div>
+		<div id="solution" class="panel">
+			<p class="titles">Solution</p>
+			<p id="solucionEncontrada"></p>
+		</div>
+		<div id="panelBotonEjecutar" class="panel">
+			<button id="ejecutar" class="boton" onclick="ejecutarPulsado()">Ejecutar</button>
+			<p id="cantDiff">Cantidad de diferencias: 0</p>
+			<p id="estadoEjecucion"></p>
+		</div>
+	</div>
+
+	<!--
+	El documento se procesa en orden (de arriba a abajo). Por tanto, las inclusiones de "script" se deben poner al final.
+	-->
+	<script type="text/javascript" src="script.js"></script>	
+</body>
+</html>
