@@ -163,7 +163,8 @@ function prepararContenidoTabla(matriz, lado, pre) {
 		result += "<tr>";
 		for (i=0;i<lado;i++) {
 			var valor = lado*j + i;
-			result += "<td id=" + pre + "-" + valor + " onclick=" + "celdaPulsada(this.id)" + "><br></td>";
+			//result += "<td id=" + pre + "-" + valor + " onclick=" + "celdaPulsada(this.id)" + "><br></td>";
+			result += "<td id=" + pre + "-" + valor + " onclick=" + "celdaPulsada(this.id)" + ">" + "(" + i + ", " + j + ")" + "</td>";
 			matriz.push(0);
 		}
 		result += "</tr>";

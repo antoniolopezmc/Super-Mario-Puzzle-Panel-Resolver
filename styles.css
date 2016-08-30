@@ -59,10 +59,32 @@ table {
 	margin-left: 5%;
 }
 
-table, th, td {
+table, td {
 	background-color: #8B4513;
     border: 3px solid white;
     border-collapse: collapse;
+}
+
+td {
+	position: relative;
+	text-align: center;
+	font-weight: bold;
+	color: black;
+}
+
+td:after {
+	content: '';
+	display: block;
+	margin-top: 50%;
+}
+
+td .content {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: gold;
 }
 
 
