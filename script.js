@@ -153,7 +153,7 @@ function funcionConstruirTablero() {
 	document.getElementById("after").style.visibility = "visible";
 	document.getElementById("solution").style.visibility = "visible";
 	document.getElementById("panelBotonEjecutar").style.visibility = "visible";
-
+	// Establecemos las dimensiones de la tabla en función del lado.
 	cambiarEstiloDeTabla(lado);
 }
 
