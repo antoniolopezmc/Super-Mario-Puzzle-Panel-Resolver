@@ -148,11 +148,13 @@ function funcionConstruirTablero() {
 	document.getElementById("crearEscenario").style.visibility = "hidden";
 	document.getElementById("lado").value = lado;
 	document.getElementById("pasos").value = pasos;
-	// ------------------------------------------------------------------
+	// mostramos los otros paneles.
 	document.getElementById("before").style.visibility = "visible";
 	document.getElementById("after").style.visibility = "visible";
 	document.getElementById("solution").style.visibility = "visible";
 	document.getElementById("panelBotonEjecutar").style.visibility = "visible";
+
+	cambiarEstiloDeTabla(lado);
 }
 
 function prepararContenidoTabla(matriz, lado, pre) {
@@ -169,6 +171,50 @@ function prepararContenidoTabla(matriz, lado, pre) {
 		result += "</tr>";
 	}
 	return result;
+}
+
+function cambiarEstiloDeTabla(lado) {
+	if((lado >= 1) && (lado <= 2)) {
+		document.getElementsByTagName("table")[0].style.width = "10%";
+		document.getElementsByTagName("table")[0].style.height = "10%";
+		document.getElementsByTagName("table")[0].style.marginLeft = "45%";
+		// -----------------------------------------------------------------
+		document.getElementsByTagName("table")[1].style.width = "10%";
+		document.getElementsByTagName("table")[1].style.height = "10%";
+		document.getElementsByTagName("table")[1].style.marginLeft = "45%";
+	} else if((lado >= 3) && (lado <= 4)) {
+		document.getElementsByTagName("table")[0].style.width = "20%";
+		document.getElementsByTagName("table")[0].style.height = "20%";
+		document.getElementsByTagName("table")[0].style.marginLeft = "40%";
+		// -----------------------------------------------------------------
+		document.getElementsByTagName("table")[1].style.width = "20%";
+		document.getElementsByTagName("table")[1].style.height = "20%";
+		document.getElementsByTagName("table")[1].style.marginLeft = "40%";
+	} else if((lado >= 5) && (lado <= 6)) {
+		document.getElementsByTagName("table")[0].style.width = "30%";
+		document.getElementsByTagName("table")[0].style.height = "30%";
+		document.getElementsByTagName("table")[0].style.marginLeft = "35%";
+		// -----------------------------------------------------------------
+		document.getElementsByTagName("table")[1].style.width = "30%";
+		document.getElementsByTagName("table")[1].style.height = "30%";
+		document.getElementsByTagName("table")[1].style.marginLeft = "35%";
+	} else if((lado >= 7) && (lado <= 12)) {
+		document.getElementsByTagName("table")[0].style.width = "50%";
+		document.getElementsByTagName("table")[0].style.height = "50%";
+		document.getElementsByTagName("table")[0].style.marginLeft = "25%";
+		// -----------------------------------------------------------------
+		document.getElementsByTagName("table")[1].style.width = "50%";
+		document.getElementsByTagName("table")[1].style.height = "50%";
+		document.getElementsByTagName("table")[1].style.marginLeft = "25%";
+	} else if((lado >= 13) && (lado <= 20)) {
+		document.getElementsByTagName("table")[0].style.width = "70%";
+		document.getElementsByTagName("table")[0].style.height = "70%";
+		document.getElementsByTagName("table")[0].style.marginLeft = "15%";
+		// -----------------------------------------------------------------
+		document.getElementsByTagName("table")[1].style.width = "70%";
+		document.getElementsByTagName("table")[1].style.height = "70%";
+		document.getElementsByTagName("table")[1].style.marginLeft = "15%";
+	}	
 }
 
 function verMatriz () {
