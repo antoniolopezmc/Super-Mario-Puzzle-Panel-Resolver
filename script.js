@@ -64,11 +64,13 @@ function cambiarColor (elem, matriz, posicion) {
 	}
 	document.getElementById("cantDiff").innerHTML = "Cantidad de diferencias: " + diferenciasEntreLas2Matrices;
 
-	if (matriz[posicion] === 0) {
+	if (matriz[posicion] === 0) { // Celda color oscuro. (No pulsada).
 		elem.style.backgroundColor = cellClicked;
+		elem.style.color = "blue";
 		matriz[posicion] = 1;
-	} else if (matriz[posicion] === 1) {
+	} else if (matriz[posicion] === 1) { // Celda color claro. (Pulsada).
 		elem.style.backgroundColor = cellNotClicked;
+		elem.style.color = "white";
 		matriz[posicion] = 0;
 	} else {
 		alert("ERROOOOOOOOOOOOOR!!! En cambiarColor.");
@@ -166,7 +168,7 @@ function prepararContenidoTabla(matriz, lado, pre) {
 		for (i=0;i<lado;i++) {
 			var valor = lado*j + i;
 			//result += "<td id=" + pre + "-" + valor + " onclick=" + "celdaPulsada(this.id)" + "><br></td>";
-			result += "<td id=" + pre + "-" + valor + " onclick=" + "celdaPulsada(this.id)" + ">" + "(" + i + ", " + j + ")" + "</td>";
+			result += "<td id=" + pre + "-" + valor + " onclick=" + "celdaPulsada(this.id)" + ">" + "<label class=\"noselect\">(" + i + ", " + j + ")</label>" + "</td>";
 			matriz.push(0);
 		}
 		result += "</tr>";
@@ -207,7 +209,7 @@ function cambiarEstiloDeTabla(lado) {
 		document.getElementsByTagName("table")[1].style.width = "50%";
 		document.getElementsByTagName("table")[1].style.height = "50%";
 		document.getElementsByTagName("table")[1].style.marginLeft = "25%";
-	} else if((lado >= 13) && (lado <= 20)) {
+	} else if((lado >= 13) && (lado <= 16)) {
 		document.getElementsByTagName("table")[0].style.width = "70%";
 		document.getElementsByTagName("table")[0].style.height = "70%";
 		document.getElementsByTagName("table")[0].style.marginLeft = "15%";
@@ -215,6 +217,14 @@ function cambiarEstiloDeTabla(lado) {
 		document.getElementsByTagName("table")[1].style.width = "70%";
 		document.getElementsByTagName("table")[1].style.height = "70%";
 		document.getElementsByTagName("table")[1].style.marginLeft = "15%";
+	} else if((lado >= 17) && (lado <= 20)) {
+		document.getElementsByTagName("table")[0].style.width = "90%";
+		document.getElementsByTagName("table")[0].style.height = "90%";
+		document.getElementsByTagName("table")[0].style.marginLeft = "5%";
+		// -----------------------------------------------------------------
+		document.getElementsByTagName("table")[1].style.width = "90%";
+		document.getElementsByTagName("table")[1].style.height = "90%";
+		document.getElementsByTagName("table")[1].style.marginLeft = "5%";
 	}	
 }
 

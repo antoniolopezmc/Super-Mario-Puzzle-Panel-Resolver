@@ -67,25 +67,20 @@ table, td {
 }
 
 td {
-	position: relative;
 	text-align: center;
 	font-weight: bold;
 	color: black;
+	font-size: 11px;
+	color: white;
 }
 
-td:after {
-	content: '';
-	display: block;
-	margin-top: 50%;
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
 }
-
-td .content {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: gold;
-}
-
 
